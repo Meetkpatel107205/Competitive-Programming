@@ -1,4 +1,6 @@
-# Prerequisites
+.cph
+.exe
+.vscode# Prerequisites
 *.d
 
 # Compiled Object files
