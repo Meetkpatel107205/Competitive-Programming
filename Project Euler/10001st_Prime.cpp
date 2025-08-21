@@ -12,7 +12,7 @@ int main() {
     int n;
 
     cin >> n;
-    
+
     int count = 0;
     long long num = 2;
 
@@ -20,7 +20,7 @@ int main() {
         if(isPrime(num)) {
             count++;
             if(count == n) {
-                cout << "The 10001st prime is: " << num << endl;
+                cout << "The " << n << " prime is: " << num << endl;
                 break;
             }
         }
