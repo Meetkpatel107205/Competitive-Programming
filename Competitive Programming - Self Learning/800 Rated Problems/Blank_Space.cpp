@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Method - 1 :-
+
 int main()
 {
     int t;
@@ -56,3 +58,37 @@ int main()
 
     return 0;
 }
+
+// Method - 2 :-
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main() {
+//     int t;
+//     cin >> t;
+//     while (t--) {
+//         int n;
+//         cin >> n;
+//         vector<int> a(n);
+
+//         for (int i = 0; i < n; i++) {
+//             cin >> a[i];
+//         }
+
+//         int blankSpace = 0;   // longest run of zeros
+//         int current = 0;      // current run length
+
+//         for (int i = 0; i < n; i++) {
+//             if (a[i] == 0) {
+//                 current++;
+//                 blankSpace = max(blankSpace, current);
+//             } else {
+//                 current = 0;  // reset streak
+//             }
+//         }
+
+//         cout << blankSpace << "\n";
+//     }
+//     return 0;
+// }
