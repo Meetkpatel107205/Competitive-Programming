@@ -32,7 +32,7 @@ int main()
 
                 int consecutiveZero = 0;
 
-                while(a[j] != 1 && j < n)
+                while(j < n && a[j] != 1)
                 {
                     consecutiveZero++;
                     j++;
