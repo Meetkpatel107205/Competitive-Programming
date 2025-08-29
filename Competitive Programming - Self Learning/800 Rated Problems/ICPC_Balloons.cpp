@@ -42,90 +42,90 @@ int main()
     return 0;
 }
 
-// Method - 2 :-
+// // Method - 2 :-
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        string s;
-        cin >> s;
+// int main() {
+//     int t;
+//     cin >> t;
+//     while(t--) {
+//         int n;
+//         cin >> n;
+//         string s;
+//         cin >> s;
 
-        unordered_set<char> solved;
-        int balloonsCount = 0;
+//         unordered_set<char> solved;
+//         int balloonsCount = 0;
 
-        for(char c : s) {
-            if(solved.find(c) == solved.end()) {
-                balloonsCount += 2; // first solve
-                solved.insert(c);
-            } else {
-                balloonsCount++; // not first solve
-            }
-        }
+//         for(char c : s) {
+//             if(solved.find(c) == solved.end()) {
+//                 balloonsCount += 2; // first solve
+//                 solved.insert(c);
+//             } else {
+//                 balloonsCount++; // not first solve
+//             }
+//         }
 
-        cout << balloonsCount << "\n";
-    }
-}
+//         cout << balloonsCount << "\n";
+//     }
+// }
 
-// Method - 3 :-
+// // Method - 3 :-
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
-    while(t--) {
-        int n;
-        cin >> n;
-        string s;
-        cin >> s;
+// int main() {
+//     int t;
+//     cin >> t;
+//     while(t--) {
+//         int n;
+//         cin >> n;
+//         string s;
+//         cin >> s;
 
-        map<char, int> mp;
-        int balloonsCount = 0;
+//         map<char, int> mp;
+//         int balloonsCount = 0;
 
-        for(char c : s) {
-            if(mp[c] == 0) {
-                balloonsCount += 2;
-            } else {
-                balloonsCount++;
-            }
-            mp[c]++;
-        }
+//         for(char c : s) {
+//             if(mp[c] == 0) {
+//                 balloonsCount += 2;
+//             } else {
+//                 balloonsCount++;
+//             }
+//             mp[c]++;
+//         }
 
-        cout << balloonsCount << "\n";
-    }
-}
+//         cout << balloonsCount << "\n";
+//     }
+// }
 
-// Method - 4 :-
+// // Method - 4 :-
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main() {
-    int t; cin >> t;
-    while(t--) {
-        int n; cin >> n;
-        string s; cin >> s;
+// int main() {
+//     int t; cin >> t;
+//     while(t--) {
+//         int n; cin >> n;
+//         string s; cin >> s;
 
-        int mask = 0;
-        int balloonsCount = 0;
+//         int mask = 0;
+//         int balloonsCount = 0;
 
-        for(char c : s) {
-            int bit = 1 << (c - 'A');
-            if((mask & bit) == 0) { // first solve
-                balloonsCount += 2;
-                mask |= bit;
-            } else { // already solved
-                balloonsCount++;
-            }
-        }
+//         for(char c : s) {
+//             int bit = 1 << (c - 'A');
+//             if((mask & bit) == 0) { // first solve
+//                 balloonsCount += 2;
+//                 mask |= bit;
+//             } else { // already solved
+//                 balloonsCount++;
+//             }
+//         }
 
-        cout << balloonsCount << "\n";
-    }
-}
+//         cout << balloonsCount << "\n";
+//     }
+// }
