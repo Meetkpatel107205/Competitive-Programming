@@ -3,14 +3,31 @@ using namespace std;
 
 int main()
 {
-    char a[10][10];
+    int t;
 
-    for(int i = 0; i < 10; i++)
+    cin >> t;
+
+    while(t--)
     {
-        for(int j = 0; j < 10; j++)
+        int points = 0;
+
+        for(int i = 1; i <= 10; i++)
         {
-            cin >> a[i][j];
+            for(int j = 1; j <= 10; j++)
+            {
+                char temp;
+    
+                cin >> temp;
+    
+                if(temp == 'X')
+                {
+                    int ring = min({i, j, 11 - i, 11 - j});
+                    points += ring;
+                }
+            }
         }
+        
+        cout << points << "\n";
     }
 
     return 0;
